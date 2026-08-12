@@ -6,22 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Khady GUEYE</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body class="font-sans bg-gray-50">
+
     <!-- Navigation -->
     <nav class="bg-white shadow sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="img/logo.jpg" alt="Khady" class="w-10 h-10 rounded-full">
-                <h1 class="text-[#2596be] font-bold text-lg">Khady GUEYE</h1>
+        <div class="container mx-auto px-4 py-4">
+            <!-- Ligne principale -->
+            <div class="flex justify-between items-center">
+                <!-- Logo + nom -->
+                <div class="flex items-center gap-3">
+                    <img src="img/logo.jpg" alt="Khady" class="w-10 h-10 rounded-full">
+
+                    <h1 class="text-[#2596be] font-bold text-lg">
+                        Khady GUEYE
+                    </h1>
+                </div>
+                <!-- Menu desktop -->
+                <ul class="hidden md:flex gap-6 text-gray-700 font-medium">
+                    <li>
+                        <a href="#competences" class="hover:text-[#2596be] transition"> Mes Compétences</a>
+                    </li>
+
+                    <li>
+                        <a href="#projets" class="hover:text-[#2596be] transition"> Mes Projets</a>
+                    </li>
+
+                    <li>
+                        <a href="#experiences" class="hover:text-[#2596be] transition"> Expériences </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="hover:text-[#2596be] transition"> Contact </a>
+                    </li>
+                </ul>
+
+                <!-- Bouton hamburger mobile -->
+                <button id="menuBtn" class="md:hidden text-gray-700 text-2xl focus:outline-none"> ☰ </button>
             </div>
-            <ul class="flex gap-6 text-gray-700 font-medium">
-                <li><a href="#competences" class="hover:text-[#2596be]">Mes Compétences</a></li>
-                <li><a href="#projets" class="hover:text-[#2596be]">Mes Projets</a></li>
-                <li><a href="#experiences" class="hover:text-[#2596be]">Expériences</a></li>
-                <li><a href="#contact" class="hover:text-[#2596be]">Contact</a></li>
+
+            <!-- Menu mobile -->
+            <ul id="mobileMenu" class="hidden md:hidden flex-col gap-4 mt-4 pb-2
+                   text-gray-700 font-medium border-t pt-4">
+                <li>
+                    <a href="#competences" class="block hover:text-[#2596be] transition"> Mes Compétences </a>
+                </li>
+
+                <li>
+                    <a href="#projets" class="block hover:text-[#2596be] transition"> Mes Projets </a>
+                </li>
+
+                <li>
+                    <a href="#experiences" class="block hover:text-[#2596be] transition"> Expériences </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="block hover:text-[#2596be] transition"> Contact </a>
+                </li>
             </ul>
+
         </div>
     </nav>
 
@@ -39,7 +85,7 @@
 
     <!-- Compétences -->
     <section id="competences" class="px-6 py-12 bg-gray-100">
-        <h2 class="text-2xl font-bold text-center text-[#2596be] mb-12">Mes Compétences</h2>
+        <h2 class="text-2xl font-bold text-center text-[#2596be] mb-12">⚙️ Mes Compétences</h2>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div
                 class="bg-white p-6 rounded-lg shadow hover:scale-105 transform transition duration-300 ease-in-out flex items-center gap-3">
@@ -223,7 +269,7 @@
 
     <!-- Projets -->
     <section id="projets" class="px-6 py-12 bg-white">
-        <h2 class="text-2xl font-bold text-center text-[#2596be] mb-8">Mes Projets</h2>
+        <h2 class="text-2xl font-bold text-center text-[#2596be] mb-8">🚀 Mes Projets</h2>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
             <!-- Projet 1 -->
@@ -315,7 +361,7 @@
 
     <!-- Expériences -->
     <section id="experiences" class="px-6 py-12 bg-gray-100">
-        <h2 class="text-2xl font-bold text-center text-[#2596be] mb-8">Mes Expériences</h2>
+        <h2 class="text-2xl font-bold text-center text-[#2596be] mb-8">💼 Mes Expériences</h2>
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <!-- TelEtCom -->
             <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transform transition duration-300 ease-in-out">
@@ -401,38 +447,86 @@
 
         </div>
     </section>
-
-
-
+    
     <!-- Footer -->
-    <footer id="contact" class="bg-[#2596be] text-white py-8 mt-10">
+    <footer id="contact" class="bg-[#2596be] text-white py-10 mt-10">
         <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
+            <!-- Services -->
             <div>
-                <h4 class="font-semibold mb-3">Mes services</h4>
+                <h4 class="font-semibold text-lg mb-3 flex items-center gap-2"> Mes services</h4>
                 <ul class="space-y-1 text-sm">
                     <li>Développement web</li>
-                    <li>Intégration d'API</li>
+                    <li>Intégration d’API</li>
                     <li>Conception UI/UX</li>
                 </ul>
             </div>
+            <!-- Outils -->
             <div>
-                <h4 class="font-semibold mb-3">Outils favoris</h4>
+                <h4 class="font-semibold text-lg mb-3 flex items-center gap-2"> Outils favoris</h4>
                 <ul class="space-y-1 text-sm">
                     <li>Laravel / Angular</li>
                     <li>Tailwind / Bootstrap</li>
                     <li>MySQL / PostgreSQL</li>
+                    <li>Prisma / Supabase</li>
+                    <li>Vercel / Netlify</li>
                 </ul>
             </div>
+            <!-- Contact -->
             <div>
-                <h4 class="font-semibold mb-3">Contact</h4>
-                <ul class="space-y-1 text-sm">
-                    <li>Email : khadygueye1002@gmail.com</li>
-                    <li>Tél : +221 77 503 08 63</li>
+                <h4 class="font-semibold text-lg mb-3 flex items-center gap-2"> Contact </h4>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email :</span>
+                        <a href="mailto:khadygueye1002@gmail.com" class="underline hover:text-gray-200">
+                            khadygueye1002@gmail.com </a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Tél :</span>
+                        <a href="tel:+221775030863" class="underline hover:text-gray-200">
+                            +221 77 503 08 63
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex gap-4 mt-4">
+                            <!-- GitHub -->
+                            <a href="https://github.com/khadyjaGueye" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub" class="text-2xl hover:text-gray-300 transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/khady-gueye-29130a1b1" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn"
+                                class="text-2xl hover:text-gray-300 transition duration-300">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+
+                        </div>
+                    </li>
+
                 </ul>
             </div>
+
         </div>
-        <div class="text-center text-sm mt-8">&copy; 2024 Khady GUEYE - Tous droits réservés.</div>
+
+        <!-- Bas de page -->
+        <div class="text-center text-sm mt-8 border-t border-white/30 pt-4">
+            &copy; 2024 Khady GUEYE — Tous droits réservés.
+        </div>
     </footer>
+
 </body>
 
 </html>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+    });
+</script>
